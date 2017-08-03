@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    function getDemo(){
+        $(document).ready(function() {
+          $.getJSON("https://talaikis.com/api/quotes/random/", function(json) {
+              $(".result").html(json);
+          });
+    });
+  }
+
+
+function post(path, params, method) {
+    method = method || "post"; // Set method to post by default if not specified.
+
+    // The rest of this code assumes you are not using a library.
+    // It can be made less wordy if you use one.
+    var form = document.createElement("form");
+    form.setAttribute("method", method);
+    form.setAttribute("action", path);
+
+    for(var key in params) {
+        if(params.hasOwnProperty(key)) {
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", key);
+            hiddenField.setAttribute("value", params[key]);
+
+            form.appendChild(hiddenField);
+         }
+    }
+
+    document.body.appendChild(form);
+    form.submit();
+}
+    </script>
+
+  <!-- <form class="" action="http://api.forismatic.com/api/1.0/" method="post">
+    <input type="text" name="method" value="getQuote">
+    <input type="text" name="format" value="json">
+    <input type="text" name="lang" value="en">
+    <input type="submit" name="" value="">
+
+  </form> -->
+  <button type="button" name="button" onclick="getDemo()">Click Me!</button>
+  <div class="result"></div>
+
+</body>
+</html>
