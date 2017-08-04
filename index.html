@@ -12,7 +12,7 @@
   <title>Random Quote Machine</title>
 
   <style media="screen" type="text/css">
-  @import url(http://fonts.googleapis.com/css?family=Raleway:400,500);
+  @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
 
   html, body{
     width: 100%;
@@ -52,15 +52,22 @@
   }
   .buttons{
     margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
+    /*display: flex;*/
+    /*justify-content: space-between;*/
   }
   .tweet{
     display: none;
+    float: left;
   }
   .btn{
     background-color: rgb(29, 29, 29);
     color: white;
+    float: right;
+  }
+  .btn:hover{
+    border: 1px solid black;
+    color: black;
+    background-color: transparent;
   }
   .footer{
     margin-top: 70px;
@@ -78,7 +85,7 @@
       .quote-box{
           width: 400px;
           height: auto;
-          padding: 20px;
+          padding: 50px;
         }
 
         .quote{
@@ -105,11 +112,12 @@
         <div class="tweet">
           <i class="fa fa-twitter-square fa-3x"></i>
         </div>
-        <button type="button" class="new-quote btn">New Quote</button>
+        <a class="new-quote btn">New Quote</a>
     </div>
     </div>
       <div class="footer">
         <p>by Tolu Yussuff</p>
+        <i></i>
       </div>
   </div>
 </body>
@@ -124,18 +132,27 @@
               success: function(data) {
                 $(".quote-text").html(data.quote);
                 $(".quote-author").text("-" + data.author);
+                $(".tweet").show();
+              },
+              error: function(xhr, textStatus, errorThrown) {
+                $(".tweet").hide();
+                var html = "";
+                html += "<p style='text-align: center; font-size: 50px'> ☹ </p>";
+                html += "<p style='text-align: center'> error retrieving quote. Please try again </p>";
+                $(".quote-text").html(html);
+                // alert(textStatus);
+                // alert(errorThrown);
               },
               cache: false
             });
-              $(".quote-box").animate(
+
+            $(".quote-box").animate(
                 { opacity: 0 }, 500,
               function() {
-                $(".tweet").css("display","block");
                 $(this).animate({
                   opacity: 1
                 }, 500);
             });
-
           });
       });
 
