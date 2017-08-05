@@ -159,7 +159,7 @@
             }, 500);
             $(".quote-author").html("-" + author);
           });
-          $(".tweet").attr('href','https://twitter.com/intent/tweet?text=' + encodeURI('"' + text + '"' + '-'+ author) +'&hashtags=Quote' + '&via=todywa');
+          $(".tweet").attr('href','https://twitter.com/intent/tweet?text=' + encodeURI('"' + text +'"' + ' -'+ author) +'&hashtags=Quote');
         },
         error: function(xhr, textStatus, errorThrown) {
           var html = "";
