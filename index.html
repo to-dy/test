@@ -67,7 +67,7 @@
     }
 
     .tweet, .tweet:visited {
-      color: black;
+      color: rgb(29, 29, 29);
       display: none;
       float: left;
     }
@@ -159,7 +159,7 @@
             }, 500);
             $(".quote-author").html("-" + author);
           });
-          $(".tweet").attr('href','https://twitter.com/intent/tweet?text=' + encodeURI('""' + text + '""' + '-'+ author) +'&hashtags=Quote' + '&via=todywa');
+          $(".tweet").attr('href','https://twitter.com/intent/tweet?text=' + encodeURI('"' + text + '"' + '-'+ author) +'&hashtags=Quote' + '&via=todywa');
         },
         error: function(xhr, textStatus, errorThrown) {
           var html = "";
