@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TransferRules | Pay</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Nunito Sans;
+            display: flex;
+            justify-content: center;
+            /* align-content: center; */
+        }
+
+        form {
+            padding-top: 20px;
+        }
+
+        form .body {
+            width: 685px;
+            height: 436px;
+            background: url("img/background.svg") no-repeat center;
+            position: relative;
+            box-shadow: -10px 12px 7px rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+        }
+
+        .logo img {
+            position: absolute;
+            left: 172.97px;
+            top: 14.56px;
+        }
+
+        .logo p {
+            position: absolute;
+            width: 121px;
+            height: 28px;
+            left: 141.63px;
+            top: 54px;
+
+            font-style: normal;
+            font-weight: bold;
+            line-height: normal;
+            font-size: 18px;
+            text-align: center;
+            letter-spacing: 0.36px;
+
+            color: #FFFFFF;
+        }
+
+        .body .label {
+            font-style: normal;
+            font-weight: bold;
+            line-height: normal;
+            font-size: 16px;
+            letter-spacing: -0.36px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+
+        #deposit-label {
+            position: absolute;
+            width: 219px;
+            height: 25px;
+            left: 31.38px;
+            top: 138.68px;
+        }
+
+        input[type=number],
+        input[type=text] {
+            width: 214px;
+            padding: 5px 0;
+            margin: 5px 0;
+            font-size: 36px;
+            color: white;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 2px solid #FF6200;
+            display: inline-block;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+            background: url(img/naira.svg) no-repeat scroll 1px 10px;
+            padding-left: 35px;
+        }
+
+        #deposit-amt {
+            position: absolute;
+            left: 31.38px;
+            top: 170.01px;
+        }
+
+        #name-label {
+            position: absolute;
+            width: 198px;
+            height: 25px;
+            left: 31.38px;
+            top: 253.84px;
+        }
+
+        #name-field {
+            position: absolute;
+            left: 32.91px;
+            top: 286.93px;
+            font-size: 18px;
+            /* width: 200px; */
+        }
+
+        #card-num-label {
+            position: absolute;
+            width: 170px;
+            height: 22px;
+            left: 322.85px;
+            top: 44.44px;
+        }
+
+        #card-num {
+            position: absolute;
+            width: 324px;
+            height: 40px;
+            left: 323px;
+            top: 75px;
+            border: 1.5px solid #FFFFFF;
+            border-radius: 4px;
+            background: none;
+            padding: 10px;
+        }
+
+        #exp-label {
+            position: absolute;
+            width: 93px;
+            height: 22px;
+            left: 322.85px;
+            top: 152.48px;
+        }
+
+        #exp-date {
+            position: absolute;
+            width: 199.15px;
+            height: 33px;
+            left: 322.85px;
+            top: 183.89px;
+            background: transparent;
+            border: none;
+        }
+
+        #exp-date::-webkit-inner-spin-button {
+            display: none;
+        }
+
+        #exp-date::-webkit-calendar-picker-indicator {
+            /* background: url("img/date-picker.svg") 97% 50% no-repeat; */
+        }
+
+        #exp-date::-webkit-datetime-edit-month-field,
+        #exp-date::-webkit-datetime-edit-day-field,
+        #exp-date::-webkit-datetime-edit-year-field {
+            color: #FFFFFF;
+            font-size: 24px;
+        }
+
+        #exp-date::-webkit-calendar-picker-indicator {
+            /* opacity: 0; */
+            color: #FFFFFF;
+            background: transparent;
+            height: 10px;
+            width: 10px;
+        }
+
+        #cvc-label {
+            position: absolute;
+            width: 32px;
+            height: 22px;
+            left: 322.85px;
+            top: 237.52px;
+        }
+
+        #cvc-num {
+
+            position: absolute;
+            width: 65px;
+            height: 29px;
+            left: 325px;
+            top: 265px;
+            font-size: 24px;
+            border: 1.5px solid #FFFFFF;
+            border-radius: 4px;
+            background: none;
+            padding: 10px;
+        }
+
+        input[type=button] {
+            width: 214px;
+            padding: 5px 0;
+            margin: 5px 0;
+            font-size: 26px;
+            font-weight: bold;
+            color: white;
+            background: #4F4F4F;
+            box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            border: none;
+
+            position: absolute;
+            width: 212.01px;
+            height: 47.5px;
+            left: 375.66px;
+            top: 344.79px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <form action="">
+            <div class="body">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="">
+                    <p>TransferRules</p>
+                </div>
+
+
+                <div class="body-right">
+                    <p class="label" id="deposit-label">ENTER DEPOSIT AMOUNT</p>
+                    <input type="number" name="" id="deposit-amt">
+                    <p class="label" id="name-label">ENTER NAME ON CARD</p>
+                    <input type="text" name="" id="name-field">
+                </div>
+
+
+                <div class="body-left">
+                    <p class="label" id="card-num-label">ENTER CARD NUMBER</p>
+                    <input type="number" name="" id="card-num">
+
+
+                    <p class="label" id="exp-label">EXPIRATION</p>
+                    <input type="date" name="" id="exp-date">
+
+                    <p class="label" id="cvc-label">CVC</p>
+                    <input type="number" name="" id="cvc-num">
+
+                    <input type="button" value="DEPOSIT" id="deposit-btn">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
