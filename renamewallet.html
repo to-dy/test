@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rename Wallet - Admin</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: Nunito Sans;
+    }
+
+    .active-sidebar {
+      background-color: #C1D6DD;
+    }
+
+    .navbar {
+      border-radius: 0 !important;
+    }
+
+    .navbar-brand {
+      font-family: Nunito Sans;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      font-size: 20px;
+      color: #FFFFFF !important;
+    }
+
+    .navbar-header img {
+      width: 24px;
+      height: 24px;
+    }
+
+    #sidebar {
+      /* margin: 0 !important; */
+      width: 200px;
+      height: 500px;
+      text-align: center;
+      border-right: 1px solid rgb(192, 190, 190);
+      margin-top: 30px;
+      padding: 0;
+    }
+
+    .navbar-toggle {
+      display: block;
+      float: left;
+    }
+
+    .navbar {
+      height: 50px;
+      background: #25313F;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .profile {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #757171;
+      margin-top: 4px;
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+
+    #sidebar>h3 {
+      font-size: 14px;
+
+      color: #828282;
+      margin-bottom: 40px;
+    }
+
+    .w6 p {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      line-height: normal;
+      font-size: 18px;
+
+      color: #25313F;
+    }
+
+    form .body {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+
+        <a class="navbar-brand" href="#"> <span><img src="img/logo.png" alt=""></span>   PaysFund</a>
+
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+      </div>
+
+      <ul class="nav navbar-nav">
+        <li><a href="#" style="color:white; font-size:18px;">Wallet View</a></li>
+      </ul>
+
+      <div class="profile navbar-right"></div>
+      <div class="navbar-form navbar-right">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2" id="sidebar">
+
+        <h3>DASHBOARD</h3>
+        <ul class="nav nav-stacked">
+          <li><a href="#">Wallet View</a></li>
+          <li class="active-sidebar"><a href="#">Accounts</a></li>
+        </ul>
+
+
+      </div>
+
+
+      <div class="col-sm-10">
+        <div class="container">
+          <div class="w6">
+            <img src="img/w6.svg" alt="" width="120px" height="120px">
+            <p>Rename Wallet</p>
+
+            <form action="">
+              <div class="body">
+                <label for="">Wallet Name</label>
+                <input type="text">
+                <label for="">New Name</label>
+                <input type="text">
+                <label for="">Account Password</label>
+                <input type="text">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
