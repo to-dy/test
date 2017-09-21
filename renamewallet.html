@@ -78,7 +78,23 @@
       margin-bottom: 40px;
     }
 
-    .w6 p {
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      /* height: 800px; */
+      /* align-items: center; */
+      /* text-align: center; */
+      position: relative;
+
+      left: 350px;
+    }
+
+    .form-container .header {
+      float: left !important;
+    }
+
+    .form-container p {
       font-family: Roboto;
       font-style: normal;
       font-weight: bold;
@@ -88,9 +104,61 @@
       color: #25313F;
     }
 
+    form {
+      width: 300px;
+      
+      position: relative;
+    }
+
     form .body {
       display: flex;
+      text-align: center;
       flex-direction: column;
+    }
+
+    .body .label {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      line-height: normal;
+      font-size: 16px;
+      width: 100px;
+
+
+      color: #25313F;
+    }
+
+    .body input[type=text] {
+      width: 300px;
+      padding: 5px 0;
+      margin: 5px 0;
+      font-size: 20px;
+      /* color: white; */
+      background: rgba(253, 128, 50, 0.15);
+      border: 0;
+      /* border-bottom: 2px solid #FF6200; */
+      display: inline-block;
+    }
+
+    .body input[type=text]:focus {
+      background-color: #FD8032;
+      color: white;
+      font-weight: bold;
+    }
+
+    .body input[type=button] {
+      position: absolute;
+      background: #FD8032;
+      border-radius: 55px;
+      border: 0;
+      width: 100px;
+      height: 30px;
+      color: #FFFFFF;
+      font-weight: bold;
+      line-height: normal;
+      font-size: 16px;
+      top: 270px;
+      left: 200px;
     }
   </style>
 
@@ -138,22 +206,27 @@
 
 
       <div class="col-sm-10">
-        <div class="container">
-          <div class="w6">
+        <div class="form-container">
+
+
+          <div class="header">
             <img src="img/w6.svg" alt="" width="120px" height="120px">
             <p>Rename Wallet</p>
-
-            <form action="">
-              <div class="body">
-                <label for="">Wallet Name</label>
-                <input type="text">
-                <label for="">New Name</label>
-                <input type="text">
-                <label for="">Account Password</label>
-                <input type="text">
-              </div>
-            </form>
           </div>
+
+          <form action="">
+            <div class="body">
+              <label for="" class="label">Wallet Name</label>
+              <input type="text">
+              <label for="" class="label">New Name</label>
+              <input type="text">
+              <label for="" class="label">Account Password</label>
+              <input type="text">
+              <input type="button" value="Save">
+            </div>
+
+          </form>
+
         </div>
       </div>
     </div>
