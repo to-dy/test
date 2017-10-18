@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    background-color: #00AEFF;
+}
+
+.branding{
+    background-color: #084482; 
+    padding: 5px 20px 5px 20px;    
+    display: inline;
+    margin-left: 0 !important;
+}
+
+.unilever-img {
+    margin-left: 20px;    
+}
+
+.inline {
+    display: inline;    
+    line-height: 45px;
+    white-space: nowrap;
+}
+
+.text-white{
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.text-white:hover{
+    text-decoration: none;
+}
+
+.acc-officer {
+    display: inline;
+    white-space: nowrap;
+    padding: 0px;
+}
+
+@media (min-width: 768px) {
+    .acc-officer {
+        display: inline;
+        white-space: nowrap;
+        position: absolute;
+        top: -18px;
+        right: 200px;
+        padding: 0px;
+    }
+}
+
+.profile-pic {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    left: 0px;
+    top: 20px;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.profile-img {
+    float: left;
+    margin-top: 13px;
+}
+
+.profile-text {
+    margin-left: 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.profile-text:hover{
+    color: #fff;
+    text-decoration: none;    
+}
+
+.profile-text:active{
+    text-decoration: none !important;
+    background-color: #00AEFF !important;
+}
+
+.profile-text:visited{
+    text-decoration: none !important;
+    background-color: #00AEFF !important;
+}
+
+.info {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #084482;
+    width: 190px;
+    height: 35px;
+    border-radius: 7px;
+}
+
+.info p {
+    font-style: normal;
+    margin: 2px 5px;
+    line-height: normal;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.navbar-profile {
+   
+}
+
+.bordered {
+    border: 2px solid #000;
+}
+
+.vr-line {
+    position: relative;
+    top: -45px;
+    left: 215px;
+    height: 60px;
+    border-left: 1px solid #fff;
+}
+
+.dropdown-name{
+    top: 40px;
+}
+
+.icon-bar{
+    color: #fff;
+    background-color: #fff;
+}
+
+.mybtn{
+    background-color: #084482; 
+}
