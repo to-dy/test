@@ -344,16 +344,16 @@ hr {
     border: 1px solid var(--primary-color) !important;
 }
 
-.nav-tabs {
+.admin-tabs {
     border: none !important;
 }
 
-.nav-tabs li {
+.admin-tabs li {
     background-color: white;
     text-align: center;
 }
 
-.nav-tabs a {
+.admin-tabs a {
     border: none !important;
     border-right: 1px solid rgba(0, 0, 0, 0.15) !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15) !important;
@@ -365,7 +365,7 @@ hr {
     margin-right: 0 !important;
 }
 
-.nav-tabs li.active>a {
+.admin-tabs li.active>a {
     color: var(--primary-color) !important;
     border-left: none !important;
     border-bottom: none !important;
@@ -524,7 +524,24 @@ hr {
     height: 1000px;
 }
 
-.ao-chat .active {
+.ao-chat .nav-tabs li>a {
+    padding: 5px 4px 5px 7px;
+    border-radius: 0;
+    border: 0;
+    margin-right: 0 !important;
+}
+
+.ao-chat .nav-tabs {
+    border-bottom: 0;
+}
+
+.ao-chat  .nav-tabs li.active>a {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-color: #F2F2F2;
+}
+
+.ao-chat .nav-tabs li.active>a:focus {
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     background-color: #F2F2F2;
@@ -538,31 +555,27 @@ hr {
     margin-top: 50px;
 }
 
-.ao-chat li {
+.ao-chat .nav-tabs > li {
     margin-bottom: 10px;
 }
 
-.ao-chat li>a {
-    padding: 5px 0 5px 7px;
-}
 
-.ao-chat a:hover {
+.ao-chat .nav-tabs a:hover {
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     background-color: #F2F2F2;
 }
 
-.ao-chat a:focus {
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
-    background-color: #F2F2F2;
-}
 
 .active-chat {
     /* width: 233px; */
     height: 39px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ao-chat .tab-content {
+    padding: 0;
 }
 
 .ao-chat .ao-chat-body {
